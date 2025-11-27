@@ -17,6 +17,7 @@ This tool automates the identification of public comparable companies ("comps") 
 2. Set your OpenAI API key:
   ```bash
    export OPENAI_API_KEY='your-key-here'
+  ```
 3. Run the script:
   ```bash
   python main.py
