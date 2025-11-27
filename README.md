@@ -13,3 +13,13 @@ This tool automates the identification of public comparable companies ("comps") 
 1. Install dependencies:
    ```bash
    pip install -r requirements.txt
+2. Set your OpenAI API key:
+  ```bash
+   export OPENAI_API_KEY='your-key-here'
+3. Run the script:
+  ```bash
+  python main.py
+
+## Design Decisions
+* **Data Sources:** Used `yfinance` to comply with the "no paid APIs" constraint. Mapped `Sector` and Industry fields to approximate SIC classifications.
+* **Validation:** Handled ticker collisions (e.g., TechnipFMC vs. FTI Consulting) by strictly enforcing the semantic similarity score between business descriptions.
