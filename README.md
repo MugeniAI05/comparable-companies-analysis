@@ -1,7 +1,7 @@
 # comparable-companies-analysis
 
 ## Overview
-This tool automates the identification of public comparable companies ("comps") for private valuation targets. It utilizes an **Agentic Architecture** to reason about business models, fetch real-time financial data, and validate peer relevance using semantic analysis.
+This tool automates the identification of public comparable companies ("comps") for private valuation targets. It utilizes an Agentic Architecture to reason about business models, fetch real-time financial data, and validate peer relevance using semantic analysis.
 
 ## Key Features
 * **Reasoning Engine:** Uses `gpt-4o` to brainstorm strategic peers based on deep semantic understanding of the target's business description.
