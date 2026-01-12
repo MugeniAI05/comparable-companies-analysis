@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-"""Irene_LLM Coding.ipynb
 # Automated Comparable Company Analysis Generator
 
 ## Executive Summary
