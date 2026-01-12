@@ -24,5 +24,26 @@ This tool automates the identification of public comparable companies ("comps") 
 ```
 
 ## Design Decisions
-* **Data Sources:** Used `yfinance` to comply with the "no paid APIs" constraint. Mapped `Sector` and Industry fields to approximate SIC classifications.
-* **Validation:** Handled ticker collisions (e.g., TechnipFMC vs. FTI Consulting) by strictly enforcing the semantic similarity score between business descriptions.
+
+### Free & Compliance-Friendly Data Sources
+`yfinance` is used instead of paid market data APIs. Industry and sector fields are mapped as proxies for SIC-style classification.
+
+### Why Semantic Similarity (Not Rules)
+Fashion, luxury, and consumer brands often differ in wording despite similar economics. Embedding-based similarity captures this nuance more effectively than keyword-based filters.
+
+### Threshold Selection (0.30)
+The similarity threshold was empirically chosen to:
+- Exclude structurally unrelated firms (e.g., retailers or manufacturers without brands)
+- Retain differentiated but legitimate peers across lifestyle and luxury segments
+
+### Human-in-the-Loop Philosophy
+The system is designed to support analyst judgment, not replace it. Scale outliers and global peers are intentionally retained with transparent context to enable informed decision-making.
+
+---
+
+## Intended Use Cases
+
+- Comparable company screening for valuation
+- Peer benchmarking in strategy and corporate finance
+- Automated first-pass comps for analyst workflows
+- Demonstrations of agentic + deterministic hybrid architectures
